@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan Peters' Portfolio</title>
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/module.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dan Peters' Portfolio</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/module.css">
+  <link rel="stylesheet" href="styles/state.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&#124;Roboto&#124;Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Resume</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Dan Peters' Portfolio</h1>
-        </header>
-        <section>
-            <h2>About Me</h2>
-            <p>This is where interesting and totally compelling text will go</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2016 Dan Peters | Professional Portfolio | Code Away
-    </footer>
-    
-    <!--    jquery + script files-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
 
-    </body>
+  <header id="main-nav">
+    <div id="mobilemenu"><span class="icon-menu"></span></div>
+    <h1>Dan Peters' Portfolio</h1>
+    <nav id="menu">
+      <ul>
+        <li data-section="home"><span class="icon-home"></span>Home</li>
+        <li data-section="projects"><span class="icon-rocket"></span>Projects</li>
+        <li data-section="resume"><span class="icon-checkmark"></span>Resume</li>
+        <li data-section="contact"><span class="icon-address-book"></span>Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section-view" id="home">
+      <h2>About Me</h2>
+      <p>This is where interesting and totally compelling text will go</p>
+    </section>
+
+    <section class="section-view" id="projects">
+      <h2>Recent Projects</h2>
+    </section>
+
+    <section class="section-view" id="resume">
+      <h2>Resume</h2>
+    </section>
+
+    <section class="section-view" id="contact">
+      <h2>Contact Me</h2>
+    </section>
+  
+  </main>
+
+  <footer>
+      &copy; 2016 Dan Peters | Professional Portfolio | Code Away
+  </footer>
+
+  <!--    jquery + script files-->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="scripts/sectionView.js"></script>
+
+</body>
+
 </html>

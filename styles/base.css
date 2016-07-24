@@ -1,0 +1,107 @@
+/*
+
+BASE CSS
+
+Colors for site:
+
+Dark Slate Gray: #383D42 (this is for the text)
+Blue: #2C3E50
+Red: #E74C3C
+Warm White: #FCFFF5
+Reddish Gray: #F0EAE8
+
+*/
+
+/* GENERAL BODY STYLING */
+html, body {
+  background: #FCFFF5;
+  color: #383D42;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ADDITIONAL ICON STYLING */
+[class^="icon-"], [class*=" icon-"] {
+  padding: .5em;
+}
+
+/* MENU STYLING */
+#main-nav {
+  background: #2C3E50;
+  color: #FCFFF5;
+  border-bottom: .4em solid #383D42;
+}
+
+#main-nav h1 {
+  margin: 0 0 0 .5em;
+  padding: 0;
+}
+
+#main-nav h1:after {
+  clear: both;
+}
+
+
+#mobilemenu {
+  float: left;
+  font-size: 2em;
+  margin: 0 .5em 0 0;
+  vertical-align: middle;
+  padding-top: .1em;
+  border-right: .1em solid #FCFFF5;
+}
+
+#menu ul {
+  display: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  list-style: none;
+  font-size: 1.5rem;
+  border-bottom: .1em solid #FCFFF5;
+  padding: 1em 0;
+}
+
+/* MAIN SECTION STYLING */
+main {
+  padding: 1em;
+}
+
+
+/* ANCHOR LINK STYLING */
+a {
+  color: #E74C3C;
+}
+
+a:hover {
+  font-size: 2rem;
+}
+
+a:visited {
+  color: #383D42;
+}
+
+/* SPECIAL CODING FONT STYLING */
+.code {
+  font-family: 'Fira Mono', monospace;
+}
+
+/* FOOTER STYLING */
+footer {
+  padding: 1em;
+}
