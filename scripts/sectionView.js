@@ -22,3 +22,5 @@ $(document).ready(function() {
   menuView.handleMenu();
   menuView.toggleMobileMenu();
 });
+
+// TO-DO: ADD HANDLEBARS FUNCTIONS
