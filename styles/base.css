@@ -12,15 +12,48 @@ Reddish Gray: #F0EAE8
 
 */
 
+/* DEFAULT FONTS */
+
+@font-face {
+	font-family: 'CooperHewitt';
+	src:url('fonts/CooperHewitt-Book.eot');
+	src:url('fonts/CooperHewitt-Book.eot') format('embedded-opentype'),
+		url('fonts/CooperHewitt-Book.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CooperHewitt';
+	src:url('fonts/CooperHewitt-BookItalic.eot');
+	src:url('fonts/CooperHewitt-BookItalic.eot') format('embedded-opentype'),
+		url('fonts/CooperHewitt-BookItalic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'CooperHewitt';
+	src:url('fonts/CooperHewitt-Bold.eot');
+	src:url('fonts/CooperHewitt-Bold.eot') format('embedded-opentype'),
+		url('fonts/CooperHewitt-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
 /* GENERAL BODY STYLING */
 html, body {
-  background: #FCFFF5;
-  color: #383D42;
+  background: #e9e7e8;
+  color: #36312F;
   font-size: 1.1em;
-  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
+  font-family: 'CooperHewitt', sans-serif;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 h1,
@@ -29,7 +62,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+/* Make certain headers and strong text a darker color for emphasis */
+h1,
+h2,
+strong {
+  color: #292524;
 }
 
 /* ADDITIONAL ICON STYLING */
@@ -38,10 +79,13 @@ h6 {
 }
 
 /* MENU STYLING */
+header img {
+  display: none;
+}
+
 #main-nav {
-  background: #2C3E50;
-  color: #FCFFF5;
-  border-bottom: .4em solid #383D42;
+  background: #e9e7e8;
+  border-bottom: .4em solid #FF5247;
 }
 
 #main-nav h1 {
@@ -55,12 +99,11 @@ h6 {
 
 
 #mobilemenu {
-  float: left;
+  float: right;
   font-size: 2em;
   margin: 0 .5em 0 0;
   vertical-align: middle;
   padding-top: .1em;
-  border-right: .1em solid #FCFFF5;
 }
 
 #menu ul {
@@ -85,15 +128,15 @@ main {
 
 /* ANCHOR LINK STYLING */
 a {
-  color: #E74C3C;
+  color: #FF5247;
 }
 
 a:hover {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 a:visited {
-  color: #383D42;
+  color: #A1342D;
 }
 
 /* SPECIAL CODING FONT STYLING */
@@ -104,4 +147,54 @@ a:visited {
 /* FOOTER STYLING */
 footer {
   padding: 1em;
+}
+
+@media (min-width: 950px) {
+  html, body {
+    max-width: 50em;
+  }
+  
+  /*  Changes in how the header and nav look */
+  #mobilemenu {
+    display: none;
+  }
+  
+  header {
+    max-width: none;
+    min-height: 50em;
+    text-align: center;
+    background-color: white;
+    background-image: url("../images/header2.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+  }
+  
+  /* logo */
+  header img {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+  }
+  
+  #menu ul {
+    display: block !important;
+    width: 100%;
+  }
+  
+  #menu li {
+    float: left;
+    min-width: 25%;
+    border: none;
+    text-align: center;
+  }
+  
+  /*  THERE SHOULD BE A BETTER WAY TO CLEAR */
+  section {
+    clear: both;
+  }
+
 }

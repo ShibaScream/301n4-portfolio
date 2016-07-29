@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
   <link rel="stylesheet" href="styles/icons.css">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono&#124;Roboto&#124;Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
   <!--  This will hold the handlebars.js templates for the portfolio and resume sections-->
   <!--  right now this is a duplicate template from the pair programming code, need to modify more to fit with my portfolio -->
   <script id="portfolioTemplate" type="text/x-handlebars-template">
-    <article data-author="{{author}}" data-category="{{category}}">
+    <article data-language="{{language}}" data-category="{{category}}">
       <header>
         <h1>{{title}}</h1>
         <div class="byline">
@@ -28,13 +28,26 @@
     </article>
   </script>
   <!--  need to finish this resume template -->
-  <script id="resumeTemplate" type="text/x-handlebars-template"></script>
+  <script id="resumeTemplate" type="text/x-handlebars-template">
+    <article data-year="{{year}}" data-category="{{category}}">
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          <a href="{{companyURL}}">{{company}}</a>
+          <time pubdate datetime="{{dateFrom}}">{{dateFrom}}</time> -- <time pubdate datetime="{{dateTo}}">{{dateTo}}</time>
+        </div>
+      </header>
+      <section class="article-body">{{{description}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
 </head>
 
 <body>
 
   <header id="main-nav">
     <div id="mobilemenu"><span class="icon-menu"></span></div>
+    <img alt="Logo for Dan Peters Portfolio, red circle with initials" src="images/Portfolio_Logo.png"> 
     <h1>Dan Peters' Portfolio</h1>
     <nav id="menu">
       <ul>
@@ -55,20 +68,42 @@
           has strong communication and presentation skills, and has many different interests and passions from which to draw new ideas and solutions.</p>
       <h2>Software Engineering Experience</h2>
         <p>I am a self-taught programmer and enrolled in Code Fellows to further enhance my job readiness and programming skillset.</p>
-        <p>I started in middle school building computers, but for some reason shied away from programming at that time. I guess I was more excited about LAN parties,
-          new video games, and hardware. However, after a career-detour-and-life-experience-enhancer called the military, and college, I found myself doing a freelance
+        <p>I started in middle school building computers, but for some reason shied away from programming at that time. After a career-detour-and-life-experience-enhancer called the military, and college, I found myself doing a freelance
           job that required knowing some JavaScript to add functionality to PDF forms. In learning the skills that I needed to complete the work, I found myself in a 
           new world I found incredibly interesting. It sparked the beginnings of a career transition which led me to MOHAI (the Museum of History &amp; Industry), where
-          I am the Data Manager &amp; Analyst. Meanwhile, I have been taking courses through the University of Washington, MITx, and Harvardx, along with the usual
-          assortment of learning through places such as Treehouse and Codeacademy.</p>
+          I am the Data Manager &amp; Analyst.</p>
+        <p>I have taken courses through the University of Washington, MITx, and Harvardx, along with the usual
+          assortment of learning through places such as Treehouse and Codeacademy, and am currently enrolled in Code Fellows.</p>
     </section>
 
     <section class="section-view" id="projects">
-      <h2>Recent Projects</h2>
+      <h2>Recent Projects &amp; Thoughts</h2>
+      <article data-language="{{language}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            published <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
     </section>
 
     <section class="section-view" id="resume">
       <h2>Resume</h2>
+      <article data-year="{{year}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            <a href="{{companyURL}}">{{company}}</a>
+            <time pubdate datetime="{{dateFrom}}">{{dateFrom}}</time> -- <time pubdate datetime="{{dateTo}}">{{dateTo}}</time>
+          </div>
+        </header>
+        <section class="article-body">{{{description}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
     </section>
 
     <section class="section-view" id="contact">
