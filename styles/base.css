@@ -47,7 +47,7 @@ html, body {
   color: #36312F;
   font-size: 1.1em;
   line-height: 1.5;
-  padding: 4em 1em;
+/*  padding: 4em 1em;*/
   font-family: 'CooperHewitt', sans-serif;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -79,12 +79,12 @@ strong {
 }
 
 /* MENU STYLING */
-header img {
+#main-nav img {
   display: none;
 }
 
 #main-nav {
-  background: #e9e7e8;
+  background: white;
   border-bottom: .4em solid #FF5247;
 }
 
@@ -101,7 +101,7 @@ header img {
 #mobilemenu {
   float: right;
   font-size: 2em;
-  margin: 0 .5em 0 0;
+/*  margin: 0 .5em 0 0;*/
   vertical-align: middle;
   padding-top: .1em;
 }
@@ -149,9 +149,18 @@ footer {
   padding: 1em;
 }
 
-@media (min-width: 950px) {
+@media only screen and (min-width: 950px) {
   html, body {
+/*    max-width: 50em;*/
+  }
+  
+  main, footer {
     max-width: 50em;
+    margin: 0 auto;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+  margin-left: -1em;
   }
   
   /*  Changes in how the header and nav look */
@@ -159,30 +168,35 @@ footer {
     display: none;
   }
   
-  header {
+  #main-nav {
     max-width: none;
-    min-height: 50em;
     text-align: center;
-    background-color: white;
-    background-image: url("../images/header2.jpg");
+    color: #e9e7e8;
+    background-image: url("../images/newHeader.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.2;
-    padding: 10vw 2em;
+    padding: 7vw 2em;
+  }
+  
+  #main-nav h1 {
+    color: #e9e7e8 !important;
   }
   
   /* logo */
-  header img {
+  #main-nav img {
     display: inline-block;
     height: 120px;
     vertical-align: top;
     width: 120px;
+    padding: 1em;
   }
   
   #menu ul {
     display: block !important;
     width: 100%;
+    margin-top: 1em;
   }
   
   #menu li {
