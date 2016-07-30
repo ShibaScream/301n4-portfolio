@@ -1,4 +1,6 @@
-menuView = {};
+var menuView = {},
+    articleView = {},
+    resumeView = {};
 
 menuView.handleMenu = function () {
   var $menu = $('#menu'),
@@ -42,8 +44,8 @@ $(document).ready(function () {
   menuView.toggleMobileMenu();
   // fire the first time
   menuView.checkSize();
-  // check again on resize
-  $(window).resize(_.debounce(menuView.checkSize, 200));
+  // check again on resize, using debounce to avoid multiple firings
+  $(window).resize(_.debounce(menuView.checkSize, 500));
 });
 
 // TO-DO: ADD HANDLEBARS FUNCTIONS
