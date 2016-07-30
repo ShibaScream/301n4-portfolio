@@ -1,0 +1,90 @@
+#time {
+  display: inline;
+  float: right;
+}
+
+/* MENU STYLING */
+#main-nav img {
+  display: none;
+}
+
+#main-nav {
+  background: white;
+  border-bottom: .4em solid #FF5247;
+}
+
+#main-nav h1 {
+  margin: 0 0 0 .5em;
+  padding: 0;
+}
+
+#main-nav h1:after {
+  clear: both;
+}
+
+#mobilemenu {
+  float: right;
+  font-size: 2em;
+/*  margin: 0 .5em 0 0;*/
+  vertical-align: middle;
+  padding-top: .1em;
+}
+
+#menu ul {
+  display: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  list-style: none;
+  font-size: 1.5rem;
+  border-bottom: .1em solid #FCFFF5;
+  padding: 1em 0;
+}
+
+@media only screen and (min-width: 950px) {
+  /*  Changes in how the header and nav look */
+  #mobilemenu {
+    display: none;
+  }
+
+  #main-nav {
+    max-width: none;
+    text-align: center;
+    color: #e9e7e8;
+    background-image: url("../images/newHeader.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 7vw 2em;
+  }
+
+  #main-nav h1 {
+    color: #e9e7e8 !important;
+  }
+
+  /* logo */
+  #main-nav img {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+    padding: 1em;
+  }
+
+  #menu ul {
+    display: block !important;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  #menu li {
+    float: left;
+    min-width: 25%;
+    border: none;
+    text-align: center;
+  }
+}

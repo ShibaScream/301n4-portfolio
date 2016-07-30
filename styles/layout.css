@@ -1,4 +1,26 @@
-#time {
-  display: inline;
-  float: right;
+/* MAIN SECTION STYLING */
+main {
+  padding: 1em;
+}
+
+/* FOOTER STYLING */
+footer {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 950px) {
+  main, footer {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+  margin-left: -1em;
+  }
+
+  /*  THERE SHOULD BE A BETTER WAY TO CLEAR */
+  section {
+    clear: both;
+  }
+
 }
