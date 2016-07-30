@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dan Peters' Portfolio</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/module.css">
+  <link rel="stylesheet" href="styles/state.css">
+  <link rel="stylesheet" href="styles/icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+  <!--  This will hold the handlebars.js templates for the portfolio and resume sections-->
+  <!--  right now this is a duplicate template from the pair programming code, need to modify more to fit with my portfolio -->
+  <script id="portfolioTemplate" type="text/x-handlebars-template">
+    <article data-language="{{language}}" data-category="{{category}}">
+      <header>
+        <h3>{{title}}</h3>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address>
+          published <time pubdate datetime="{{publishedOn}}">{{publishStatus}}</time>
+        </div>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
+  <!--  need to finish this resume template -->
+  <script id="resumeTemplate" type="text/x-handlebars-template">
+    <article>
+      <header>
+        <h3>{{title}}</h3>
+        <div class="byline">
+          <a href="{{companyURL}}">{{company}}</a>
+          <div id="time">
+            <time pubdate datetime="{{dateFrom}}">{{dateFrom}}</time> -- <time pubdate datetime="{{dateTo}}">{{dateTo}}</time>
+          </div>
+      </div>
+      </header>
+      <section class="article-body">{{{description}}}</section>
+      <!--      <a href="#" class="read-on">Read on &rarr;</a>-->
+    </article>
+  </script>
+</head>
+
+<body>
+
+  <header id="main-nav">
+    <div id="mobilemenu"><span class="icon-menu"></span></div>
+    <img alt="Logo for Dan Peters Portfolio, red circle with initials" src="images/Portfolio_Logo.png"> 
+    <h1>Dan Peters' Portfolio</h1>
+    <nav id="menu">
+      <ul>
+        <li data-section="home"><span class="icon-home"></span>Home</li>
+        <li data-section="projects"><span class="icon-rocket"></span>Projects</li>
+        <li data-section="resume"><span class="icon-checkmark"></span>Resume</li>
+        <li data-section="contact"><span class="icon-address-book"></span>Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section-view" id="home">
+      <h2>Who I am</h2>
+        <p>At my core, I am a person who finds joy in helping others. I am a geek with a big heart. I am a Marine Corps veteran who became a social worker who became a data analyst, 
+          who is moving into software engineering. I find meaning in my life by making a difference in other's lives and by being a positive influence in this world. 
+          I get energized by solving those problems that everyone said couldn't be solved. I get excited about things like process improvement and efficiency. I am not afraid to use Google. 
+          I like to dive into manuals, StackOverflow, and any other resource at my disposal to find the answers I need. I am an introvert that works well with others,
+          has strong communication and presentation skills, and has many different interests and passions from which to draw new ideas and solutions.</p>
+      <h2>Software Engineering Experience</h2>
+        <p>I am a self-taught programmer and enrolled in Code Fellows to further enhance my job readiness and programming skillset.</p>
+        <p>I started in middle school building computers, but for some reason shied away from programming at that time. After a career-detour-and-life-experience-enhancer called the military, and college, I found myself doing a freelance
+          job that required knowing some JavaScript to add functionality to PDF forms. In learning the skills that I needed to complete the work, I found myself in a 
+          new world I found incredibly interesting. It sparked the beginnings of a career transition which led me to MOHAI (the Museum of History &amp; Industry), where
+          I am the Data Manager &amp; Analyst.</p>
+        <p>I have taken courses through the University of Washington, MITx, and Harvardx, along with the usual
+          assortment of learning through places such as Treehouse and Codeacademy, and am currently enrolled in Code Fellows.</p>
+    </section>
+
+    <section class="section-view" id="projects">
+      <h2>Recent Projects &amp; Thoughts</h2>
+    </section>
+
+    <section class="section-view" id="resume">
+      <h2>Resume</h2>
+    </section>
+
+    <section class="section-view" id="contact">
+      <h2>Contact Me</h2>
+        <p>A contact page should have contact info on it right? I wish the internet was a super chill place where I could post my email, phone number, address, favorite coffee shop, and current location for all to see.</p>
+        <p>I think I would regret that.</p>
+        <p>So I only post that stuff on accepted social media channels...you know, like everyone else. </p>
+        <p>If you want to talk business, connect with me on one of the following places:</p>
+        <div class="contact_logos">
+          <a href="https://github.com/ShibaScream" target="_blank"><img alt="github logo" src="images/GitHub-Mark-64px.png"></a>
+          <a href="https://www.linkedin.com/in/danielrpeters" target="_blank"><img alt="linkedin logo" src="images/In-Black-66px-R.png"></a>
+        </div>
+    </section>
+  
+  </main>
+
+  <footer>
+      &copy; 2016 Dan Peters | Professional Portfolio | Code Away
+  </footer>
+
+  <!--    jquery + script files-->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="vendor/scripts/lodash.custom.min.js"></script>
+  <script src="scripts/articleItems.js"></script>
+  <script src="scripts/resumeItems.js"></script>
+  <script src="scripts/menuView.js"></script>
+  <script src="scripts/articleView.js"></script>
+  <script src="scripts/resumeView.js">s</script>
+</body>
+
+</html>
