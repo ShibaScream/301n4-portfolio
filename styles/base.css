@@ -95,3 +95,7 @@ a:visited {
 .code {
   font-family: 'Fira Mono', monospace;
 }
+
+.read-less {
+  display: none;
+}

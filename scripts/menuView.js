@@ -1,6 +1,4 @@
-var menuView = {},
-    articleView = {},
-    resumeView = {};
+var menuView = {};
 
 menuView.handleMenu = function () {
   var $menu = $('#menu'),
@@ -24,6 +22,16 @@ menuView.hideMobileMenu = function () {
   $('#menu ul').fadeOut('fast');
 };
 
+menuView.goHome = function () {
+  $('#drplogo').on('click', function () {
+    $('#menu li:first').click();
+  });
+  
+  $('#homeheader').on('click', function () {
+    $('#menu li:first').click();
+  });
+}
+
 /*****
   credit to https://www.fourfront.us/blog/jquery-window-width-and-media-queries
   found way to check if in mobile version of site
@@ -41,6 +49,7 @@ menuView.checkSize = function () {
 
 $(document).ready(function () {
   menuView.handleMenu();
+  menuView.goHome();
   menuView.toggleMobileMenu();
   // fire the first time
   menuView.checkSize();

@@ -33,6 +33,6 @@ var rawArticles = [
     author: 'Dan Peters',
     authorUrl: '#',
     publishedOn: '7/31/2016',
-    body: '<p>Do user centered design Ut Duis hacker sit in bootstrapping integrate parallax physical computing cortado dolore. Occaecat aliqua entrepreneur aute aute parallax fund aute agile elit bootstrapping consectetur. Steve Jobs SpaceTeam sunt tempor convergence disrupt grok.</p><p>Cupidatat earned media non thinker-maker-doer sunt adipisicing id elit. Pivot earned media qui SpaceTeam minimum viable product ideate aute moleskine aute food-truck mollit. Est eiusmod dolore personas co-working sticky note ad experiential.</p>'
+    body: '<p>Do user centered design Ut Duis hacker sit in bootstrapping integrate parallax physical computing cortado dolore.</p><pre><code>function test() {\n&nbsp;&nbsp;console.log(\'this now works!\')\n};\ntest();</code></pre><p>Occaecat aliqua entrepreneur aute aute parallax fund aute agile elit bootstrapping consectetur. Steve Jobs SpaceTeam sunt tempor convergence disrupt grok.</p><p>Cupidatat earned media non thinker-maker-doer sunt adipisicing id elit. Pivot earned media qui SpaceTeam minimum viable product ideate aute moleskine aute food-truck mollit. Est eiusmod dolore personas co-working sticky note ad experiential.</p>'
   }
 ];

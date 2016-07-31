@@ -11,7 +11,7 @@ var rawResumeItems = [
   {
     title: 'Data Manager & Analyst',
     company: 'MOHAI',
-    companyURL: 'mohai.org',
+    companyURL: 'http://www.mohai.org',
     companyLogo: 'tempURL',
     dateFrom: '12/1/2014',
     dateTo: 'Present',
