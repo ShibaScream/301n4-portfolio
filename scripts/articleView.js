@@ -1,7 +1,9 @@
-var articles = [];
+// TO DO: create AJAX call
 
+// articleView object
 var articleView = {};
 
+// Article constructor - for loading JSON data into article objects
 function Article(opts) {
   this.title = opts.title;
   this.language = opts.language;
@@ -11,6 +13,9 @@ function Article(opts) {
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
 }
+
+// moving the articles variable out of the global namespace
+Article.articleData = [];
 
 Article.prototype.toHtml = function () {
   

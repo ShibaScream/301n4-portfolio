@@ -1,4 +1,4 @@
-var jobs = [];
+// TO DO: create AJAX call
 
 function Job(opts) {
   this.title = opts.title;
@@ -9,6 +9,9 @@ function Job(opts) {
   this.dateTo = opts.dateTo;
   this.description = opts.description;
 }
+
+// moving this out of global namespace
+Job.resumeData = [];
 
 Job.prototype.toHtml = function () {
   
