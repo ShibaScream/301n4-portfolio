@@ -7,14 +7,17 @@
   <title>Dan Peters' Portfolio</title>
   
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  
   <!-- normalize stylesheet -->
   <link rel="stylesheet" href="vendor/styles/normalize.css">
+  
   <!--  my stylesheets, using smaccs rules  -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
   <link rel="stylesheet" href="styles/icons.css">
+  
   <!-- Highlight.js stylesheet -->
   <link rel="stylesheet" href="vendor/highlight/styles/darkula.css">
   
@@ -57,6 +60,7 @@
     <img id="drplogo" alt="Logo for Dan Peters Portfolio, red circle with initials" src="images/Portfolio_Logo.png"> 
     <h1 id="homeheader">Dan Peters' Portfolio</h1>
     <nav id="menu">
+      <!-- For usability, it would probably be best to wrap these with button elements -->
       <ul>
         <li data-section="home"><span class="icon-home"></span>Home</li>
         <li data-section="projects"><span class="icon-rocket"></span>Projects</li>
@@ -118,11 +122,7 @@
   <!--  highlight.js for code snippets  -->
   <script src="vendor/highlight/highlight.pack.js"></script>
   <!--  my scripts -->
-  <script src="scripts/articleItems.js"></script>
-  <script src="scripts/resumeItems.js"></script>
-  <script src="scripts/menuView.js"></script>
-  <script src="scripts/articleView.js"></script>
-  <script src="scripts/resumeView.js"></script>
+  <script src="scripts/view.js"></script>
   <!--  Run highlight.js  -->
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
