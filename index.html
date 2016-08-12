@@ -122,7 +122,11 @@
   <!--  highlight.js for code snippets  -->
   <script src="vendor/highlight/highlight.pack.js"></script>
   <!--  my scripts -->
-  <script src="scripts/view.js"></script>
+  <script src="scripts/menuHandler.js"></script>
+  <script src="scripts/blog.js"></script>
+<!--  <script src="scripts/resume.js"></script>-->
+  <!-- Load Blog -->
+  <script> Article.fetchAll(); </script>
   <!--  Run highlight.js  -->
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
