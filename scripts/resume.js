@@ -47,19 +47,19 @@ var resume = (function (window, $, Handlebars) {
     if (localStorage.resumeData) {
       
       this.loadAll(JSON.parse(localStorage.resumeData));
+      this.initPage();
     
     } else {
       
       $.getJSON('../data/resumeData.json', function (data) {
         Job.loadAll(data);
         localStorage.setItem('resumeData', JSON.stringify(Job.resumeData));
+        Job.initPage();
       }).fail(function (x, textStatus, y) {
         console.log('Resume failed to load. Error: ', textStatus);
       });
       
     }
-    
-    this.initPage();
     
   };
   

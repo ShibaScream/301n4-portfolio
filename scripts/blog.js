@@ -78,19 +78,19 @@ var blog = (function (window, $, Handlebars) {
     if (localStorage.articleData) {
       
       this.loadAll(JSON.parse(localStorage.articleData));
+      this.initPage();
       
     } else {
       
       $.getJSON('../data/articleData.json', function (data) {
         Article.loadAll(data);
         localStorage.setItem('articleData', JSON.stringify(Article.articleData));
+        Article.initPage();
       }).fail(function (x, textStatus, y) {
         console.log('Blog failed to load. Error: ', textStatus);
       });
       
     }
-    
-    this.initPage();
     
   };
   
