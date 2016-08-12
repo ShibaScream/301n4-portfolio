@@ -124,9 +124,12 @@
   <!--  my scripts -->
   <script src="scripts/menuHandler.js"></script>
   <script src="scripts/blog.js"></script>
-<!--  <script src="scripts/resume.js"></script>-->
-  <!-- Load Blog -->
-  <script> Article.fetchAll(); </script>
+  <script src="scripts/resume.js"></script>
+  <!-- Load Blog & Resume -->
+  <script> 
+    blog.fetchAll();
+    resume.fetchAll();
+  </script>
   <!--  Run highlight.js  -->
   <script>hljs.initHighlightingOnLoad();</script>
 </body>
