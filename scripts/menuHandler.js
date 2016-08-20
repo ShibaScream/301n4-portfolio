@@ -1,19 +1,20 @@
-!function (window, $, _) {
+var menuView = (function (window, $, _) {
   'use strict';
   
   var menuView = {};
 
-  menuView.handleMenu = function () {
-    var $menu = $('#menu'),
-        $sections = $('.section-view');
-
-    $menu.on('click', 'li', function () {
-      $sections.hide();
-      $('#' + $(this).data('section')).show();
-    });
-
-    $('#menu li:first').click();
-  };
+  // I think I can get rid of this?
+//  menuView.handleMenu = function () {
+//    var $menu = $('#menu'),
+//      $sections = $('.section-view');
+//
+//    $menu.on('click', 'li', function () {
+//      $sections.hide();
+//      $('#' + $(this).data('section')).show();
+//    });
+//
+//    $('#menu li:first').click();
+//  };
 
   menuView.toggleMobileMenu  = function () {
     $('#mobilemenu').on('click', function () {
@@ -25,15 +26,16 @@
     $('#menu ul').fadeOut('fast');
   };
 
-  menuView.goHome = function () {
-    $('#drplogo').on('click', function () {
-      $('#menu li:first').click();
-    });
-
-    $('#homeheader').on('click', function () {
-      $('#menu li:first').click();
-    });
-  };
+  // I think I can get rid of this?
+//  menuView.goHome = function () {
+//    $('#drplogo').on('click', function () {
+//      $('#menu li:first').click();
+//    });
+//
+//    $('#homeheader').on('click', function () {
+//      $('#menu li:first').click();
+//    });
+//  };
 
   /*****
     credit to https://www.fourfront.us/blog/jquery-window-width-and-media-queries
@@ -51,18 +53,16 @@
   };
 
   $(document).ready(function () {
-    menuView.handleMenu();
-    menuView.goHome();
+//    menuView.handleMenu();
+//    menuView.goHome();
     menuView.toggleMobileMenu();
     // fire the first time
     menuView.checkSize();
     // check again on resize, using debounce to avoid multiple firings
     $(window).resize(_.debounce(menuView.checkSize, 500));
   });
-
-  // TO-DO: ADD HANDLEBARS FUNCTIONS
   
   // attach to window dom
-  window.menuView = menuView;
+  return menuView;
   
-}(window, jQuery, _);
+}(window, jQuery, _));
