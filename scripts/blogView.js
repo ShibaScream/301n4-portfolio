@@ -44,8 +44,12 @@ var blogView = (function ($, Handlebars, hljs, blogData) {
 
   view.initPage = function () {
 
+    var $projects = $('#projects');
+
+    $projects.empty();
+
     blogData.all.forEach(function (article) {
-      $('#projects').append(view.toHTML(article));
+      $projects.append(view.toHTML(article));
     });
 
     view.setTeasers();

@@ -16,8 +16,12 @@ var resumeView = (function ($, Handlebars) {
 
   view.initPage = function () {
 
+    var $resume = $('#resume');
+
+    $resume.empty();
+
     resumeData.all.forEach(function (job) {
-      $('#resume').append(view.toHTML(job));
+      $resume.append(view.toHTML(job));
     });
 
   };
