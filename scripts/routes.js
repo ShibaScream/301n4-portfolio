@@ -5,7 +5,7 @@ page('/contact', contactController.show);
 
 // TO DO: Add an actual error page
 page('*', function () {
-  console.log('This should be a 404 Error Page');
+  console.error('This should be a 404 Error Page');
 });
 
 page();
