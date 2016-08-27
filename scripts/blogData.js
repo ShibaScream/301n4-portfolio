@@ -25,8 +25,6 @@ var blogData = (function ($) {
         return new Article(article);
       });
 
-    console.log(this.all);
-
   };
 
   Article.fetchAll = function (callback) {

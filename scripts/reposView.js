@@ -3,21 +3,14 @@ var reposView = (function($, repos) {
 
   var repoView = {};
 
-  var ui = function() {
-    // Best practice: Cache the DOM query if it's used more than once.
-    var $github = $('#github');
-
-    $github.find('*').empty();
-    $github.show().siblings().hide();
-  };
-
-  // Set up a new compile method to help render our repos.
   var render = Handlebars.compile($('#repo-template').html());
 
   repoView.index = function() {
-    // ui();
+    var $github = $('#github');
 
-    $('#github').append(
+    $github.empty();
+
+    $github.append(
       repos.with('name').map(render)
     );
   };

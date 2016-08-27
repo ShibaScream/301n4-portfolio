@@ -1,4 +1,4 @@
-(function (window, $, _) {
+(function ($, _) {
   'use strict';
 
   var menuView = {};
@@ -65,4 +65,4 @@
   // // attach to window dom
   // return menuView;
 
-}(window, jQuery, _));
+}(jQuery, _));
