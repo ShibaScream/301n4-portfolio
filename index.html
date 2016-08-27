@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Dan Peters' Portfolio</title>
-  
+
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  
+
   <!-- normalize stylesheet -->
   <link rel="stylesheet" href="vendor/styles/normalize.css">
-  
+
   <!--  my stylesheets, using smaccs rules  -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
   <link rel="stylesheet" href="styles/icons.css">
-  
+
   <!-- Highlight.js stylesheet -->
   <link rel="stylesheet" href="vendor/highlight/styles/darkula.css">
-  
+
   <!--  handlebars.js templates for the portfolio and resume sections-->
   <script id="portfolioTemplate" type="text/x-handlebars-template">
     <article data-language="{{language}}" data-category="{{category}}">
@@ -52,12 +52,24 @@
       <section class="resume-description">{{{description}}}</section>
     </article>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
 </head>
 
 <body>
   <header id="main-nav">
     <div id="mobilemenu"><span class="icon-menu"></span></div>
-    <img id="drplogo" alt="Logo for Dan Peters Portfolio, red circle with initials" src="images/Portfolio_Logo.png"> 
+    <img id="drplogo" alt="Logo for Dan Peters Portfolio, red circle with initials" src="images/Portfolio_Logo.png">
     <h1 id="homeheader">Dan Peters' Portfolio</h1>
     <nav id="menu">
       <!-- For usability, it would probably be best to wrap these with button elements -->
@@ -69,23 +81,25 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
     <section class="section-view" id="home">
       <h2>Who I am</h2>
-        <p>At my core, I am a person who finds joy in helping others. I am a geek with a big heart. I am a Marine Corps veteran who became a social worker who became a data analyst, 
-          who is moving into software engineering. I find meaning in my life by making a difference in other's lives and by being a positive influence in this world. 
-          I get energized by solving those problems that everyone said couldn't be solved. I get excited about things like process improvement and efficiency. I am not afraid to use Google. 
+        <p>At my core, I am a person who finds joy in helping others. I am a geek with a big heart. I am a Marine Corps veteran who became a social worker who became a data analyst,
+          who is moving into software engineering. I find meaning in my life by making a difference in other's lives and by being a positive influence in this world.
+          I get energized by solving those problems that everyone said couldn't be solved. I get excited about things like process improvement and efficiency. I am not afraid to use Google.
           I like to dive into manuals, StackOverflow, and any other resource at my disposal to find the answers I need. I am an introvert that works well with others,
           has strong communication and presentation skills, and has many different interests and passions from which to draw new ideas and solutions.</p>
       <h2>Software Engineering Experience</h2>
         <p>I am a self-taught programmer and enrolled in Code Fellows to further enhance my job readiness and programming skillset.</p>
         <p>I started in middle school building computers, but for some reason shied away from programming at that time. After a career-detour-and-life-experience-enhancer called the military, and college, I found myself doing a freelance
-          job that required knowing some JavaScript to add functionality to PDF forms. In learning the skills that I needed to complete the work, I found myself in a 
+          job that required knowing some JavaScript to add functionality to PDF forms. In learning the skills that I needed to complete the work, I found myself in a
           new world I found incredibly interesting. It sparked the beginnings of a career transition which led me to MOHAI (the Museum of History &amp; Industry), where
           I am the Data Manager &amp; Analyst.</p>
         <p>I have taken courses through the University of Washington, MITx, and Harvardx, along with the usual
           assortment of learning through places such as Treehouse and Codeacademy, and am currently enrolled in Code Fellows.</p>
+      <h2>See my projects on GitHub:</h2>
+        <ul id="github"></ul>
     </section>
 
     <section class="section-view" id="projects">
@@ -125,6 +139,8 @@
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <!--  my scripts -->
   <script src="scripts/menuHandler.js"></script>
+  <script src="scripts/repos.js"></script>
+  <script src="scripts/reposView.js"></script>
   <script src="scripts/blogData.js"></script>
   <script src="scripts/resumeData.js"></script>
   <script src="scripts/blogView.js"></script>
@@ -134,6 +150,6 @@
   <script src="scripts/resumeController.js"></script>
   <script src="scripts/contactController.js"></script>
   <script src="scripts/routes.js"></script>
-  
+
 </body>
 </html>
