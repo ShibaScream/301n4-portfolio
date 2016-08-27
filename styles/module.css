@@ -44,6 +44,12 @@
   padding: 1em 0;
 }
 
+#menu a {
+  color: #36312F !important;
+  text-decoration: none !important;
+}
+
+
 @media only screen and (min-width: 950px) {
   /*  Changes in how the header and nav look */
   #mobilemenu {

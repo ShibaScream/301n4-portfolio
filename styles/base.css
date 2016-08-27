@@ -86,10 +86,6 @@ a:visited {
   color: #A1342D;
 }
 
-a h1 {
-	color: #e9e7e8;
-}
-
 /* ADDITIONAL ICON STYLING */
 [class^="icon-"], [class*=" icon-"] {
   padding: .5em;
