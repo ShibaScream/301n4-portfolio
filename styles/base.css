@@ -79,11 +79,15 @@ a {
 }
 
 a:hover {
-  font-size: 1.25rem;
+  /*font-size: 1.25rem;*/
 }
 
 a:visited {
   color: #A1342D;
+}
+
+a h1 {
+	color: #e9e7e8;
 }
 
 /* ADDITIONAL ICON STYLING */

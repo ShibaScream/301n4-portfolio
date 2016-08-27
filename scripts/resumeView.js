@@ -1,32 +1,27 @@
-var jobs = [];
+var resumeView = (function ($, Handlebars) {
+  'use strict';
 
-function Job(opts) {
-  this.title = opts.title;
-  this.company = opts.company;
-  this.companyURL = opts.companyURL;
-  this.companyLogo = opts.companyLogo;
-  this.dateFrom = opts.dateFrom;
-  this.dateTo = opts.dateTo;
-  this.description = opts.description;
-}
+  var view = {
+    templateScript: $('#resumeTemplate').html(),
+    theTemplate: null
+  };
 
-Job.prototype.toHtml = function () {
-  
-  var templateScript = $('#resumeTemplate').html(),
-      theTemplate = Handlebars.compile(templateScript);
-  
-  return theTemplate(this);
-  
-};
+  view.toHTML = function (job) {
 
-rawResumeItems.sort(function (a, b) {
-  return (new Date(b.dateFrom)) - (new Date(a.dateFrom));
-});
+    this.theTemplate = Handlebars.compile(view.templateScript);
 
-rawResumeItems.forEach(function (item) {
-  jobs.push(new Job(item));
-});
+    return this.theTemplate(job);
 
-jobs.forEach(function (job) {
-  $('#resume').append(job.toHtml());
-});
+  };
+
+  view.initPage = function () {
+
+    resumeData.all.forEach(function (job) {
+      $('#resume').append(view.toHTML(job));
+    });
+
+  };
+
+  return view;
+
+}(jQuery, Handlebars, resumeData));

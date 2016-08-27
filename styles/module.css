@@ -53,8 +53,9 @@
   #main-nav {
     max-width: none;
     text-align: center;
-    color: #e9e7e8;
-    background-image: url("../images/newHeader.jpg");
+    color: #e9e7e8 !important;
+    text-decoration: none !important;
+    background-image: url("../images/field_path_danielroizer_header_small.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,6 +64,7 @@
   }
 
   #main-nav h1 {
+    margin: 0;
     color: #e9e7e8 !important;
   }
 
@@ -87,4 +89,10 @@
     border: none;
     text-align: center;
   }
+
+  #menu a {
+    color: #e9e7e8 !important;
+    text-decoration: none !important;
+  }
+
 }
