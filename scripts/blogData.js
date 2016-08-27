@@ -17,35 +17,37 @@ var blogData = (function ($) {
 
   Article.loadAll = function (data) {
 
-    this.all = data.sort(function (a, b) {
-      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-    }).map(function (article) {
-      return new Article(article);
-    });
-    
+    this.all = data
+      .sort(function (a, b) {
+        return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+      })
+      .map(function (article) {
+        return new Article(article);
+      });
+
     console.log(this.all);
-    
+
   };
 
   Article.fetchAll = function (callback) {
-    
-    if (localStorage.articleData) {
-      
+
+    if (localStorage.articleData && localStorage.articleData !== 'undefined') {
+
       this.loadAll(JSON.parse(localStorage.articleData));
       callback();
-      
+
     } else {
-      
+
       $.getJSON('../data/articleData.json', function (data) {
         Article.loadAll(data);
-        localStorage.setItem('articleData', JSON.stringify(this.all));
+        localStorage.setItem('articleData', JSON.stringify(Article.all));
         callback();
       }).fail(function (x, textStatus) {
-        console.log('Blog failed to load. Error: ', textStatus);
+        console.error('Blog failed to load. Error: ', textStatus);
       });
-      
+
     }
-    
+
   };
   // attaching to DOM
   return Article;
