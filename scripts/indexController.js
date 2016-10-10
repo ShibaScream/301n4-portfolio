@@ -1,4 +1,4 @@
-var indexController = (function ($, repos, reposView) {
+var indexController = (function () {
   'use strict';
 
   var controller = {};
@@ -11,4 +11,4 @@ var indexController = (function ($, repos, reposView) {
 
   return controller;
 
-}(jQuery, repos, reposView));
+}());

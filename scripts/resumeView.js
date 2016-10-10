@@ -1,4 +1,4 @@
-var resumeView = (function ($, Handlebars) {
+var resumeView = (function () {
   'use strict';
 
   var view = {
@@ -28,4 +28,4 @@ var resumeView = (function ($, Handlebars) {
 
   return view;
 
-}(jQuery, Handlebars, resumeData));
+}());

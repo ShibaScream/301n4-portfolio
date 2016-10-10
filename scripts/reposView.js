@@ -1,4 +1,4 @@
-var reposView = (function($, repos) {
+var reposView = (function() {
   'use strict';
 
   var repoView = {};
@@ -16,4 +16,4 @@ var reposView = (function($, repos) {
   };
 
   return repoView;
-})(jQuery, repos);
+})();

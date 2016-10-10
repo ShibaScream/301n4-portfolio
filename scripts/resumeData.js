@@ -1,4 +1,4 @@
-var resumeData = (function ($, Handlebars) {
+var resumeData = (function () {
   'use strict';
   // TO DO: create AJAX call
 
@@ -48,5 +48,4 @@ var resumeData = (function ($, Handlebars) {
   };
 
   return Job;
-
-}(jQuery, Handlebars));
+}());

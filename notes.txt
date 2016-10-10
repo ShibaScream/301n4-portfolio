@@ -1,0 +1,16 @@
+Remove the "Code Away" from footer
+
+Seems like Github should be integrated in projects
+
+Could breakout templates into separate file (template.html)
+  -- would need to use ajax call to grab the file
+  -- check Handlebars docs
+
+Why am I passing in jQuery and other globally scoped objects into the modules?
+I should start learning ES6 import/export
+Probably avoid this passing
+
+950px for min-width of desktop seems high, could probably lower this to 650??
+
+Look into Gulp -- execute a build that would turn all my js into one big bundle
+Webpack is the latest and greatest, but has a really steep learning curve

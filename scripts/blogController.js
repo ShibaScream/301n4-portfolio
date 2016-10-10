@@ -1,4 +1,4 @@
-var blogController = (function ($, blogData, blogView) {
+var blogController = (function () {
   'use strict';
 
   var controller = {};
@@ -11,4 +11,4 @@ var blogController = (function ($, blogData, blogView) {
 
   return controller;
 
-}(jQuery, blogData, blogView));
+}());

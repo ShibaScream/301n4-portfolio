@@ -1,4 +1,4 @@
-var blogView = (function ($, Handlebars, hljs, blogData) {
+var blogView = (function () {
   'use strict';
 
   var view = {
@@ -60,4 +60,4 @@ var blogView = (function ($, Handlebars, hljs, blogData) {
 
   return view;
 
-}(jQuery, Handlebars, hljs, blogData));
+}());

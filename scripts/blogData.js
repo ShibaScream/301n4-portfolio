@@ -1,4 +1,4 @@
-var blogData = (function ($) {
+var blogData = (function () {
   'use strict';
 
   // Article constructor - for loading JSON data into article objects
@@ -50,4 +50,4 @@ var blogData = (function ($) {
   // attaching to DOM
   return Article;
 
-}(jQuery));
+}());

@@ -1,4 +1,4 @@
-(function ($, _) {
+(function () {
   'use strict';
 
   var menuView = {};
@@ -36,4 +36,4 @@
     $(window).resize(_.debounce(menuView.checkSize, 500));
   });
 
-}(jQuery, _));
+}());

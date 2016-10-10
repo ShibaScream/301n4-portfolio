@@ -1,4 +1,4 @@
-var repos = (function($) {
+var repos = (function() {
   'use strict';
 
   var repos = {};
@@ -22,4 +22,4 @@ var repos = (function($) {
   };
 
   return repos;
-})(jQuery);
+})();
