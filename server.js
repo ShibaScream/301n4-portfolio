@@ -13,11 +13,11 @@ var proxyGitHub = function(request, response) {
 
 app.get('/github/*', proxyGitHub);
 
-app.use(express.static('./'));
+app.use(express.static('./public/'));
 
 app.get('*', function(request, response) {
   console.log('New request:', request.url);
-  response.sendFile('index.html', { root: '.' });
+  response.sendFile('/public/index.html', { root: '.' });
 });
 
 app.listen(port, function() {

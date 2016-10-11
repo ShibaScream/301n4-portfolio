@@ -4,8 +4,15 @@
   var menuView = {};
 
   menuView.toggleMobileMenu = function () {
+
+    var $menu = $('#menu');
+
     $('#mobilemenu').on('click', function () {
-      $('#menu').find('ul').fadeToggle('fast');
+      $menu.find('ul').fadeToggle('fast');
+    });
+
+    $menu.on('click', function () {
+      $menu.find('ul').fadeToggle('fast');
     });
   };
 
