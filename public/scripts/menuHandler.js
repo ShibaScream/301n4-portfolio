@@ -6,13 +6,16 @@
   menuView.toggleMobileMenu = function () {
 
     var $menu = $('#menu');
+    var $mobilemenu = $('#mobilemenu');
 
-    $('#mobilemenu').on('click', function () {
+    $mobilemenu.on('click', function () {
       $menu.find('ul').fadeToggle('fast');
     });
 
     $menu.on('click', function () {
-      $menu.find('ul').fadeToggle('fast');
+      if ($mobilemenu.css('display') === 'block') {
+        $menu.find('ul').fadeToggle('fast');
+      }
     });
   };
 

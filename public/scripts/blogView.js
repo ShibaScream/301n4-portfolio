@@ -42,13 +42,13 @@ var blogView = (function () {
   };
 
 
-  view.initPage = function () {
+  view.initPage = function (articles) {
 
     var $projects = $('#projects');
 
     $projects.empty();
 
-    blogData.all.forEach(function (article) {
+    articles.forEach(function (article) {
       $projects.append(view.toHTML(article));
     });
 
