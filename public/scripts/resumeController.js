@@ -3,10 +3,23 @@ var resumeController = (function () {
 
   var controller = {};
 
-  controller.show = function () {
-    resumeData.fetchAll(resumeView.initPage);
-    $('.section-view').hide();
-    $('#resume').show();
+  controller.show = function (ctx, next) {
+    resumeView.initPage(ctx.jobs);
+  };
+
+  controller.loadAll = function (ctx, next) {
+    var jobData = function (jobs) {
+      ctx.jobs = resumeData.all;
+      next();
+    };
+
+    if (resumeData.all.length) {
+      ctx.jobs = resumeData.all;
+      next();
+    } else {
+      resumeData.fetchAll(resumeData);
+    }
+
   };
 
   return controller;

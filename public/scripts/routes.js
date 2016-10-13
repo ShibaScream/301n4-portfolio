@@ -1,6 +1,6 @@
 page('/', indexController.show);
-page('/projects', blogController.show);
-page('/resume', resumeController.show);
+page('/projects', blogController.loadAll, blogController.show);
+page('/resume', resumeController.loadAll, resumeController.show);
 page('/contact', contactController.show);
 
 // TO DO: Add an actual error page

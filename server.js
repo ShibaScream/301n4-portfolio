@@ -3,6 +3,10 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   app = express();
 
+app.use(require('connect-livereload')({
+  port: 35729
+}));
+
 var proxyGitHub = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (requestProxy({
@@ -13,7 +17,7 @@ var proxyGitHub = function(request, response) {
 
 app.get('/github/*', proxyGitHub);
 
-app.use(express.static('./public/'));
+app.use(express.static(process.cwd() + '/public'));
 
 app.get('*', function(request, response) {
   console.log('New request:', request.url);

@@ -14,15 +14,18 @@ var resumeView = (function () {
 
   };
 
-  view.initPage = function () {
+  view.initPage = function (jobs) {
+    $('.section-view').hide();
 
     var $resume = $('#resume');
 
     $resume.empty();
 
-    resumeData.all.forEach(function (job) {
+    jobs.forEach(function (job) {
       $resume.append(view.toHTML(job));
     });
+
+    $resume.show();
 
   };
 

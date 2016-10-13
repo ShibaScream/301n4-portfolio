@@ -43,6 +43,7 @@ var blogView = (function () {
 
 
   view.initPage = function (articles) {
+    $('.section-view').hide();
 
     var $projects = $('#projects');
 
@@ -56,6 +57,7 @@ var blogView = (function () {
 
     hljs.initHighlightingOnLoad();
 
+    $projects.show();
   };
 
   return view;
