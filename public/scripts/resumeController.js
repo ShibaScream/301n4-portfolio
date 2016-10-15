@@ -14,8 +14,7 @@ var resumeController = (function () {
     };
 
     if (resumeData.all.length) {
-      ctx.jobs = resumeData.all;
-      next();
+      jobData();
     } else {
       resumeData.fetchAll(jobData);
     }

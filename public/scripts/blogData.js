@@ -3,13 +3,9 @@ var blogData = (function () {
 
   // Article constructor - for loading JSON data into article objects
   function Article(opts) {
-    this.title = opts.title;
-    this.language = opts.language;
-    this.category = opts.category;
-    this.author = opts.author;
-    this.authorUrl = opts.authorUrl;
-    this.publishedOn = opts.publishedOn;
-    this.body = opts.body;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
   // moving the articles variable out of the global namespace

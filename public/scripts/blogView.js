@@ -53,9 +53,11 @@ var blogView = (function () {
       $projects.append(view.toHTML(article));
     });
 
-    view.setTeasers();
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
 
-    hljs.initHighlightingOnLoad();
+    view.setTeasers();
 
     $projects.show();
   };

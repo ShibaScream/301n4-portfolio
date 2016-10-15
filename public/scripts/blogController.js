@@ -17,8 +17,7 @@ var blogController = (function () {
     };
 
     if (blogData.all.length) {
-      ctx.articles = blogData.all;
-      next();
+      loadArticles();
     } else {
       blogData.fetchAll(loadArticles);
     }

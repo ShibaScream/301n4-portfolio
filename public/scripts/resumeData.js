@@ -3,13 +3,9 @@ var resumeData = (function () {
   // TO DO: create AJAX call
 
   function Job(opts) {
-    this.title = opts.title;
-    this.company = opts.company;
-    this.companyURL = opts.companyURL;
-    this.companyLogo = opts.companyLogo;
-    this.dateFrom = opts.dateFrom;
-    this.dateTo = opts.dateTo;
-    this.description = opts.description;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    },this);
   }
 
   Job.all = [];
