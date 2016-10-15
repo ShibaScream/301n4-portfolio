@@ -8,7 +8,7 @@ var resumeController = (function () {
   };
 
   controller.loadAll = function (ctx, next) {
-    var jobData = function (jobs) {
+    var jobData = function () {
       ctx.jobs = resumeData.all;
       next();
     };
@@ -17,7 +17,7 @@ var resumeController = (function () {
       ctx.jobs = resumeData.all;
       next();
     } else {
-      resumeData.fetchAll(resumeData);
+      resumeData.fetchAll(jobData);
     }
 
   };
