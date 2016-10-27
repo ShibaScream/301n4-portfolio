@@ -1,38 +1,38 @@
 [
   {
-    "title":"Job Title",
-    "company":"Company",
-    "companyURL":"#",
-    "companyLogo":"tempURL",
-    "dateFrom":"1/1/2000",
-    "dateTo":"7/1/2005",
-    "description":"<ul><li>Hire Me</li><li>Hire Me</li><li>Hire Me</li></ul>"
-  },
-  {
     "title":"Data Manager & Analyst",
     "company":"MOHAI",
-    "companyURL":"http://www.mohai.org",
-    "companyLogo":"tempURL",
+    "companyURL":"http://mohai.org",
+    "companyLogo":"public/images/resumelogos/mohai.png",
     "dateFrom":"12/1/2014",
     "dateTo":"Present",
-    "description":"<ul><li>This thing</li><li>This thing</li><li>More things</li><li>I am awesome</li><li>Hire me</li></ul>"
+    "description":"<ul><li>I manage MOHAI's data.</li><li>I process that data using Python and Tableau.</li><li>I provide web development expertise and troubleshooting to the Marketing team</li><li>I am awesome</li><li>Hire me</li></ul>"
   },
   {
-    "title":"Previous Job 1",
-    "company":"That Company",
-    "companyURL":"#",
-    "companyLogo":"tempURL",
-    "dateFrom":"1/1/2011",
-    "dateTo":"12/1/2014",
-    "description":"<ul><li>Hire Me</li><li>Hire Me</li><li>Hire Me</li></ul>"
+    "title":"Program Support Specialist",
+    "company":"Amara",
+    "companyURL":"http://amaraparenting.org",
+    "companyLogo":"public/images/resumelogos/amara.png",
+    "dateFrom":"9/1/2011",
+    "dateTo":"11/30/2014",
+    "description":"<ul><li>Performed queries, analysis, and management of client/donor data in multiple Microsoft Access and SQL databases to ensure consistency and accuracy.</li><li>Improved the look and functionality of Amara’s forms by migrating forms to PDF format and adding JavaScript functionality.</li><li>Managed Amara's WordPress-based public facing website.</li><li>Consulted leadership on technology and data best practices to solve problems and maximize efficiency, thus making better use of philanthropic revenue.</li></ul>"
   },
   {
-    "title":"Previous Job 2",
-    "company":"That Other Company",
+    "title":"Freelance Form Designer",
+    "company":"Model Remodel",
+    "companyURL":"http://modelremodel.com",
+    "companyLogo":"public/images/resumelogos/modelremodel.png",
+    "dateFrom":"9/1/2012",
+    "dateTo":"8/1/2013",
+    "description":"<ul><li>Redesigned and converted Model Remodel’s forms to Adobe PDF format with JavaScript functionality for improved ease of use and streamlined client communication by allowing them to fill out forms electronically while on the job site, decreasing reliance on paper forms.</li>"
+  },
+  {
+    "title":"Chemical, Biological, Radiological, Nuclear (CBRN) Defense Specialist",
+    "company":"United States Marine Corps",
     "companyURL":"#",
-    "companyLogo":"tempURL",
-    "dateFrom":"1/1/2005",
-    "dateTo":"1/1/2011",
-    "description":"<ul><li>Hire Me</li><li>Hire Me</li><li>Hire Me</li></ul>"
+    "companyLogo":"public/images/resumelogos/marine_corps_large.png",
+    "dateFrom":"9/1/2005",
+    "dateTo":"9/1/2009",
+    "description":"<ul><li>4 years active-duty service, Honorable Discharge.</li><li>Supervised and trained teams of 4 to 5 marines in chemical, biological, radiological, and nuclear identification, analysis, and emergency response operations.</li><li>Tasked with the operation and maintenance of more than $3.5 million of equipment.</li></ul>"
   }
 ]
